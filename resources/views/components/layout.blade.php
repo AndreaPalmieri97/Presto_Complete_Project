@@ -15,7 +15,7 @@
 
     <x-navbar />
 
-    <x-image-header />
+    
 
     {{ $slot }}
     

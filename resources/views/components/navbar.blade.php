@@ -20,8 +20,24 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Spagnolo</a></li>
           </ul>
+          @guest
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="{{route ('register')}}">Registrati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route ('login')}}">Login</a>
+          </li>
+          @endguest
+          @auth
+          <li class="nav-item">
+            <p>{{Auth::user()->name}}</p>
+          </li>
+          <li class="nav-item">
+            <form class="nav-link" method="post" action="{{route ('logout')}}">
+              @csrf
+              <button type="submit">Logout</button>
+            </form>
+            @endauth
           </li>
         </ul>
       </div>

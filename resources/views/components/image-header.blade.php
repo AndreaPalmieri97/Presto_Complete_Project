@@ -4,8 +4,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
-          <h1 class="fw-light">Presto.it</h1>
-          <p class="lead">Compra e vendi con tutto il mondo</p>
+          <h1 class="fw-light fw-bold">Presto.it</h1>
+          <p class="fs-4">Compra e vendi con tutto il mondo</p>
         </div>
       </div>
     </div>
@@ -14,9 +14,8 @@
   <!-- Page Content -->
   <section class="py-5">
     <div class="container">
-      <h2 class="fw-light">Page Content</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ab nulla dolorum autem nisi officiis
-        blanditiis voluptatem hic, assumenda aspernatur facere ipsam nemo ratione cumque magnam enim fugiat
-        reprehenderit expedita.</p>
+      <h2 class="fw-light fs-2">Compra-vendita usato</h2>
+      <p>Presto.it si occupa della compravendita di prodotti usati da parte di utenti provenienti da tutto il mondo.</p>
     </div>
   </section>
+  

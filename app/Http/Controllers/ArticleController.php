@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -16,6 +17,7 @@ class ArticleController extends Controller
 
         Article::create(
             [
+                "user_id" => Auth::user()->id,
                 'name' => $request->input('name'),
                 'category' => $request->input('category'),
                 'description' => $request->input('description'),
@@ -31,8 +33,11 @@ class ArticleController extends Controller
 
     public function index() {
 
-        $article = Article::OrderBy('created.at', 'desc')->get();
-        
+        $article = Article::orderBy('created_at', 'desc')->get();
+
         return view('index', compact('article'));
     }
+
+    
+
 }

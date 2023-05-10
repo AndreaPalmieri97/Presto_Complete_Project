@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -10,7 +11,8 @@ class ArticleController extends Controller
 {
 
     public function create() {
-        return view('create');
+        $categories = Category::all();
+        return view('create', compact('categories'));
     }
 
     public function store(Request $request) {
@@ -18,8 +20,8 @@ class ArticleController extends Controller
         Article::create(
             [
                 "user_id" => Auth::user()->id,
+                "category_id" => $request->input('category_id'),
                 'name' => $request->input('name'),
-                'category' => $request->input('category'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
             ]

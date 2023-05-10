@@ -29,7 +29,7 @@
                             <p class="my-2">{{ Auth::user()->name }}</p>
                         </li>
                         <li class="nav-item">
-                            <button class="myButton">Inserisci annunci</button>
+                            <button class="myButton"><a href="{{route('annunci')}}">Inserisci annuncio</a></button>
                         </li>
                         <li class="nav-item">
                             <form class="mx-2" method="post" action="{{ route('logout') }}">

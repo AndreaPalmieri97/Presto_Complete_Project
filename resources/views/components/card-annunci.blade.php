@@ -2,5 +2,7 @@
     <div class="card-body">
         <h4 class="card-title text-center">{{ $article->name }}</h4>
         <h6> {!! $article->description !!}</h6>
+        <h6> {!! $article->price !!}</h6>
+        <h6> {!! $article->category->name !!}</h6>
     </div>
 </div>

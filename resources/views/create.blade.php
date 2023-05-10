@@ -7,14 +7,10 @@
           <input type="text" class="form-control" name="name">
         </div>
         <label for="category" class="form-label fs-5 mb-3">Tipologia</label>
-        <select class="form-select mb-3" name="category" aria-label="Default select example">
-            <option selected>Seleziona</option>
-            <option value="1">Auricolari/Cuffie</option>
-            <option value="2">Computer mobili e fissi</option>
-            <option value="3">Cellulari</option>
-            <option value="3">Console</option>
-            <option value="3">Stampanti</option>
-            <option value="3">Componenti per setup pc</option>
+        <select class="form-select mb-3" name="category_id" aria-label="Default select example">
+            @foreach ($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>         
+            @endforeach
         </select>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>

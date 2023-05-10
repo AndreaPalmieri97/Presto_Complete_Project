@@ -4,13 +4,20 @@
 
     <div class="container">
         <div class="row">
-            @foreach ($category as $element)
-                <div class="col-12 col-md-4">
-                    <x-card categoryCategory="{{ $element['categoria'] }}" categoryImg="{{ $element['img'] }}"
-                        categoryDescription="{{ $element['description'] }}" />
+            @foreach ($categories as $category)
+            <div class="col-12 col-md-4">
+                <div class="card img-fluid card-custom" style="width: 25rem">
+                    <img class="img-custom" src="./img/{{ $category->img }}" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-3">{{ $category->name }}</h4>
+                        <h6 class="text-center mb-3"> {!! $category->description !!}</h6>
+                        <div class="d-flex justify-content-center align-items-center">
+                        <button class="myButton">Scopri di più</button>
+                    </div>
+                    </div>
                 </div>
+                    </div>
             @endforeach
-
         </div>
     </div>
     </div>

@@ -43,8 +43,8 @@
                             @csrf
                             <button type="submit">Logout</button>
                         </form>
-                    @endauth
-                </li>
+                @endauth
+                    </li>
             </ul>
         </div>
     </div>

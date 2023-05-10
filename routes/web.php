@@ -24,3 +24,5 @@ Route::post('/store-article', [ArticleController::class, 'store'])->name('store-
 Route::get('thanks', [ArticleController::class, 'thanks'])->name('thanks');
 
 Route::get('index-article', [ArticleController::class, 'index'])->name('index-article');
+
+Route::get('show-details-article{article}', [ArticleController::class, 'show'])->name('show-details-article');

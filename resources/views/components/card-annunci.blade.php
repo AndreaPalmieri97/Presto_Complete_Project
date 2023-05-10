@@ -5,5 +5,6 @@
         <h6> {!! $article->price !!}</h6>
         <h6> {!! $article->category->name !!}</h6>
         <img src="{{ Storage::url($article->img)}}" class="card-img-top" alt="...">
+        <a href="{{route('show-details-article', $article)}}"><button>Dettaglio</button></a>
     </div>
 </div>

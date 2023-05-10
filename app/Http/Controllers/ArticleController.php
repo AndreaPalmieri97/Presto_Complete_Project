@@ -21,6 +21,7 @@ class ArticleController extends Controller
             [
                 "user_id" => Auth::user()->id,
                 "category_id" => $request->input('category_id'),
+                'img' => $request->file('img')->store('public/articles'),
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),

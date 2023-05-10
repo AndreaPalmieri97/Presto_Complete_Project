@@ -1,10 +1,14 @@
 <x-layout>
 
-    <form class="my-5" method="post" action="{{route('store-article')}}">
+    <form class="my-5" method="post" action="{{route('store-article')}}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="name" class="form-label">Nome</label>
           <input type="text" class="form-control" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Image</label>
+            <input type="file" class="form-control" name="img">
         </div>
         <label for="category" class="form-label fs-5 mb-3">Tipologia</label>
         <select class="form-select mb-3" name="category_id" aria-label="Default select example">

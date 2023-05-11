@@ -12,8 +12,7 @@
                             <h4 class="card-title text-center mb-3">{{ $category->name }}</h4>
                             <h6 class="text-center mb-3"> {!! $category->description !!}</h6>
                             <div class="d-flex justify-content-center align-items-center">
-                                <a class="btn myButton" href="{{ route('show.category', $categorie->id) }}" role="button">Scopri di
-                                    più</a>
+                                <a class="btn myButton" href="{{ route('show.category', $category->id) }}" role="button">Scopri di più</a>
                             </div>
                         </div>
                     </div>

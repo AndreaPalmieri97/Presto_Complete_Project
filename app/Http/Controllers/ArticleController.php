@@ -10,12 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class ArticleController extends Controller
 {
 
-    public function create() {
+    public function create()
+    {
         $categories = Category::all();
         return view('create', compact('categories'));
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
 
         Article::create(
             [
@@ -30,21 +32,32 @@ class ArticleController extends Controller
         return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
     }
 
-    public function thanks() {
+    public function thanks()
+    {
         return view('thanks');
     }
 
-    public function index() {
+    public function index()
+    {
 
         $article = Article::orderBy('created_at', 'desc')->get();
 
         return view('index', compact('article'));
     }
 
-    public function show(Article $article) {
+    public function show(Article $article)
+    {
         return view('show', compact('article'));
     }
 
-    
+    public function filterCategory($id)
+    {
+        
+        $categoria=Category::findOrFail($id);
+        $article=$categoria->articles;
+        $categoryName=$categoria->name;
+        return view('filterCategory' ,compact('article' , 'categoryName'));
 
+
+    }
 }

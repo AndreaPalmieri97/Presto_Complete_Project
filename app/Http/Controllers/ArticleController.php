@@ -52,12 +52,9 @@ class ArticleController extends Controller
 
     public function filterCategory($id)
     {
-        
         $categoria=Category::findOrFail($id);
         $article=$categoria->articles;
         $categoryName=$categoria->name;
         return view('filterCategory' ,compact('article' , 'categoryName'));
-
-
     }
 }

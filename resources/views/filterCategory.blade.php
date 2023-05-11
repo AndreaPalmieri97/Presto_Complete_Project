@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center my-5">Annunci filtrati per: {{ $categoryName }}</h1>
+            <div class="d-flex justify-content-evenly col-6">
+                <h1>Annunci filtrati per: <h1 class="text-danger"> {{ $categoryName }} </h1> </h1>
             </div>
         </div>
     </div>

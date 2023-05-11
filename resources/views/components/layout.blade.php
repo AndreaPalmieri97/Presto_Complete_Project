@@ -20,7 +20,6 @@
     {{ $slot }}
     
 
-    <div class="vh-100"></div>
     <x-footer />
 
 </body>

@@ -1,14 +1,22 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
-                <h1>Annunci filtrati per: {{ $categoryName }}</h1>
+            <div class="col-12">
+                <h1 class="text-center my-5">Annunci filtrati per: {{ $categoryName }}</h1>
             </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
             @forelse($article as $article)
-                <x-card-annunci :article="$article" />
+                <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-lg-4 ">
+                    <x-card-annunci :article="$article" />
+                </div>
             @empty
                 <h2>Non ci sono annunci per questa categoria</h2>
             @endforelse
         </div>
     </div>
+
 </x-layout>

@@ -5,7 +5,9 @@
   --colore4: rgb(216, 221, 222);
   --colore5: rgb(217, 247, 250);
 }
-
+body{
+  background-color: var(--colore4);
+}
 .masthead {
   height: 80vh;
   min-height: 500px;
@@ -22,6 +24,15 @@
 }
 .card-custom{
   margin-bottom: 50px;
+  
+}
+
+.card-custom:hover{
+  transform: scale(1.07);
+  transition: 0.7s;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px var(--rosso);
+
 }
 .myButton {
   box-shadow:inset 0px 1px 0px 0px #bbdaf7;
@@ -50,4 +61,15 @@
 
 a {
   text-decoration: none;
+}
+
+.bg-form{
+  background-color: var(--colore5);
+  padding: 10px 200px;
+  border-radius: 50px;
+  border: solid 2px var(--colore2);
+}
+
+.img-alt{
+  height: 300px;
 }

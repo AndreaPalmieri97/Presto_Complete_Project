@@ -1,5 +1,7 @@
 <x-layout>
 
+    <h1 class="my-5 mx-5">INSERISCI L'ARTICOLO</h1>
+
     <form class="my-5" method="post" action="{{route('store-article')}}" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">

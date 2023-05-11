@@ -11,7 +11,7 @@
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="{{route('index-article')}}">Visualizza annunci</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
@@ -29,7 +29,7 @@
                             <p class="my-2">{{ Auth::user()->name }}</p>
                         </li>
                         <li class="nav-item">
-                            <button class="myButton"><a href="{{route('annunci')}}">Inserisci annuncio</a></button>
+                            <button class="myButton"><a class="text-white" href="{{route('annunci')}}">Inserisci annuncio</a></button>
                         </li>
                         <li class="nav-item">
                             <form class="mx-2" method="post" action="{{ route('logout') }}">

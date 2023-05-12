@@ -8,12 +8,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('index-article')}}">Visualizza annunci</a>
+                    <a class="nav-link" href="{{ route('index-article') }}">Visualizza annunci</a>
                 </li>
             </ul>
+            @auth
+            @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Zona Revisore
+                        <span>{{ App\Models\Article::toBeRevisionedCount() }}
+                            <span>unread messages</span>
+                        </span>
+                    </a>
+                </li>
+            @endif
+            @endauth
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <div class="d-flex justify-content-between align-items-center">
                     @guest
@@ -29,7 +40,8 @@
                             <p class="my-2">{{ Auth::user()->name }}</p>
                         </li>
                         <li class="nav-item">
-                            <button class="myButton"><a class="text-white" href="{{route('annunci')}}">Inserisci annuncio</a></button>
+                            <button class="myButton"><a class="text-white" href="{{ route('annunci') }}">Inserisci
+                                    annuncio</a></button>
                         </li>
                         <li class="nav-item">
                             <form class="mx-2" method="post" action="{{ route('logout') }}">

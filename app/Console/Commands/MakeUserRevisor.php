@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Foundation\Auth\User;
 
 class MakeUserRevisor extends Command
 {
@@ -11,7 +12,7 @@ class MakeUserRevisor extends Command
      *
      * @var string
      */
-    protected $signature = 'presto:makeUserRevisor';
+    protected $signature = 'presto:makeUserRevisor {email}';
 
     /**
      * The console command description.
@@ -20,11 +21,22 @@ class MakeUserRevisor extends Command
      */
     protected $description = "Rendi l'utente revisore" ;
 
-    /**
-     * Execute the console command.
-     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+    
     public function handle()
     {
+        $user = User::where('email', $this->argument('email'))->first();
+            if (!$user) {
+                $this->error('Utente non trovato');
+                return;
+            }
+
+        $user->is_revisor = true;
+        $user->save();
+        $this->info("L'utente {$user->name} è ora un revisore.");
         
     }
 }

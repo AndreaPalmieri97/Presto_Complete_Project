@@ -40,7 +40,7 @@ class ArticleController extends Controller
     public function index()
     {
 
-        $article = Article::orderBy('created_at', 'desc')->get();
+        $article = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->get();
 
         return view('index', compact('article'));
     }
@@ -53,7 +53,7 @@ class ArticleController extends Controller
     public function filterCategory($id)
     {
         $categoria=Category::findOrFail($id);
-        $article=$categoria->articles;
+        $article=$categoria->articles->where('is_accepted', true);
         $categoryName=$categoria->name;
         return view('filterCategory' ,compact('article' , 'categoryName'));
     }

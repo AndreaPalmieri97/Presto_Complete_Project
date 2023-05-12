@@ -21,7 +21,7 @@
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="btn myButton nav-link active text-white" aria-current="page"
-                            href="{{ route('revisor.index') }}">Zona Revisore
+                            href="{{ route('revisor.index') }}">Zona Revisore :
                             <span>{{ App\Models\Article::toBeRevisionedCount() }}
                                 <span class="visually-hidden">Articoli da visionare</span>
                             </span>

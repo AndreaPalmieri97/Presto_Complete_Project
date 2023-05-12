@@ -15,15 +15,19 @@
                 </li>
             </ul>
             @auth
-            @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Zona Revisore
-                        <span>{{ App\Models\Article::toBeRevisionedCount() }}
-                            <span>unread messages</span>
-                        </span>
-                    </a>
+                <li class="nav-item mx-3">
+                    <p class="my-2 user-log">Ciao {{ Auth::user()->name }}</p>
                 </li>
-            @endif
+                @if (Auth::user()->is_revisor)
+                    <li class="nav-item">
+                        <a class="btn myButton nav-link active text-white" aria-current="page"
+                            href="{{ route('revisor.index') }}">Zona Revisore
+                            <span>{{ App\Models\Article::toBeRevisionedCount() }}
+                                <span class="visually-hidden">Articoli da visionare</span>
+                            </span>
+                        </a>
+                    </li>
+                @endif
             @endauth
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <div class="d-flex justify-content-between align-items-center">
@@ -36,11 +40,8 @@
                         </li>
                     @endguest
                     @auth
-                        <li class="nav-item mx-3">
-                            <p class="my-2">{{ Auth::user()->name }}</p>
-                        </li>
                         <li class="nav-item">
-                            <button class="myButton"><a class="text-white" href="{{ route('annunci') }}">Inserisci
+                            <button class="myButton ms-2"><a class="text-white" href="{{ route('annunci') }}">Inserisci
                                     annuncio</a></button>
                         </li>
                         <li class="nav-item">

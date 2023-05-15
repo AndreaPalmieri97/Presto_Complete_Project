@@ -6,17 +6,15 @@
                 <form class="rounded" method="POST" action="{{ 'login' }}">
                     @csrf
                     <div class="col-12 mb-3">
-                        <label for="email" class="form-label">Email address</label>
+                        <label for="email" class="form-label fs-5 fw-bold">Indirizzo Email</label>
                         <input type="email" class="form-control" name="email">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3 col-12">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label fs-5 fw-bold">Password</label>
                         <input type="password" class="form-control" name="password">
                     </div>
-                    <button type="submit" class="btn myButton my-3">Accedi</button>
-                    <p>Non sei ancora registrato? Cosa aspetti!</p>
-                    <a class="btn myButton mb-5" href="{{ route('register') }}" role="button">Registrati</a>
+                    <button type="submit" class="btn myButton my-3">Accedi</button><br>
+                    <a class="ms-2" href="{{ route('register') }}">Non sei ancora registrato? Cosa aspetti!</a>
                 </form>
             </div>
         </div>

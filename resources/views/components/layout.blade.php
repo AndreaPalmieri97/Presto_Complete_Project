@@ -13,7 +13,6 @@
             </style>
         @livewireStyles
 </head>
-
 <body>
 
 

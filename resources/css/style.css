@@ -7,15 +7,14 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Code', monospace;
   background-color: var(--colore4);
 }
 
 .masthead {
-  height: 80vh;
+  height: 65vh;
   min-height: 500px;
-  background: rgb(171, 161, 148);
-  background: radial-gradient(circle, rgba(171, 161, 148, 1) 0%, rgba(216, 221, 222, 1) 35%, rgba(140, 39, 30, 1) 80%);
+  background-image: url('/public/img/ecommerce.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -103,4 +102,9 @@ li {
   width: 100%;
   background-color: var(--colore3);
 
+}
+
+.Logo{
+  height: 55px;
+  width: 90px;
 }

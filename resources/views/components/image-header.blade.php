@@ -14,8 +14,8 @@
   <!-- Page Content -->
   <section class="py-5">
     <div class="container">
-      <h2 class="fw-light fs-2">Compra-vendita usato</h2>
-      <p>Presto.it si occupa della compravendita di prodotti usati da parte di utenti provenienti da tutto il mondo.</p>
+      <h2 class="fw-light fs-2 text-center fs-1">Compra-vendita usato</h2>
+      <p class="text-center">Presto.it si occupa della compravendita di prodotti usati da parte di utenti provenienti da tutto il mondo.</p>
     </div>
   </section>
   

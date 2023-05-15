@@ -6,12 +6,12 @@
                 <form class="my-5" method="POST" action="{{ 'register' }}">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
+                        <label for="email" class="form-label">Indirizzo mail</label>
                         <input type="email" class="form-control" name="email">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.</div>
                     </div>
                     <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Nome</label>
                         <input type="text" class="form-control" name="name">
                     </div>
                     <div class="mb-3">
@@ -19,7 +19,7 @@
                         <input type="password" class="form-control" name="password">
                     </div>
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Password Confimation</label>
+                        <label for="password_confirmation" class="form-label">Conferma Password</label>
                         <input type="password" class="form-control" name="password_confirmation">
                     </div>
                     <button type="submit" class="btn myButton mb-2">Registrati</button><br>

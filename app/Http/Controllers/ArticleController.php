@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Livewire\HydrationMiddleware\NormalizeComponentPropertiesForJavaScript;
 
 class ArticleController extends Controller
 {
@@ -56,5 +57,12 @@ class ArticleController extends Controller
         $article=$categoria->articles->where('is_accepted', true);
         $categoryName=$categoria->name;
         return view('filterCategory' ,compact('article' , 'categoryName'));
+    }
+
+
+    public function searchArticle(Request $request)
+    {
+        $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
+        return view('filterArticle' , compact('articles'));
     }
 }

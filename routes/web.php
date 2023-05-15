@@ -41,3 +41,5 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 Route::post('/lavora-con-noi', [RevisorController::class, 'store'])->name('become.revisor.store');
+ 
+Route::get('/ricerca/articoli', [ArticleController::class, 'searchArticle'])->name('search.article');

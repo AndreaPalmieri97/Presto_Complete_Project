@@ -3,14 +3,25 @@
 namespace App\Models;
 
 use App\Models\User;
-use App\Models\Article;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Article extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+        $array = [
+            'id'=> $this->id,
+            'name' => $this->name,
+            'description' => $this->description,
+            'category' => $this->category
+        ];
+        return $array;
+    }
 
     protected $fillable = [
         'user_id',
@@ -20,13 +31,15 @@ class Article extends Model
         'price',
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
-       }
+    }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
-       }
+    }
 
     public function setAccepted($value)
     {
@@ -40,4 +53,3 @@ class Article extends Model
         return Article::where('is_accepted', null)->count();
     }
 }
-

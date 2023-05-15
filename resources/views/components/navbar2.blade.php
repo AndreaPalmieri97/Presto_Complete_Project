@@ -13,6 +13,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('index-article') }}">Visualizza annunci</a>
                 </li>
+                <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        name="searched">
+                    <button class="btn myButton" type="submit">Cerca</button>
+                </form>
             </ul>
             @auth
                 <li class="nav-item mx-3">

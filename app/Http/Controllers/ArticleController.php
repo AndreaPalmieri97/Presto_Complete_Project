@@ -16,21 +16,21 @@ class ArticleController extends Controller
         return view('create', compact('categories'));
     }
 
-    public function store(Request $request)
-    {
+    // public function store(Request $request)
+    // {
 
-        Article::create(
-            [
-                "user_id" => Auth::user()->id,
-                "category_id" => $request->input('category_id'),
-                'img' => $request->file('img')->store('public/articles'),
-                'name' => $request->input('name'),
-                'description' => $request->input('description'),
-                'price' => $request->input('price'),
-            ]
-        );
-        return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
-    }
+    //     Article::create(
+    //         [
+    //             "user_id" => Auth::user()->id,
+    //             "category_id" => $request->input('category_id'),
+    //             'img' => $request->file('img')->store('public/articles'),
+    //             'name' => $request->input('name'),
+    //             'description' => $request->input('description'),
+    //             'price' => $request->input('price'),
+    //         ]
+    //     );
+    //     return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
+    // }
 
     public function thanks()
     {

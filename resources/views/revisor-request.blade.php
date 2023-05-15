@@ -12,7 +12,7 @@
                                     <div class="form-group">
                                         <label for="name">Nome completo</label>
                                         <div class="col-md-10 mt-3">
-                                            <input id="name" type="text" class="form-control" name="name">
+                                            <input id="name" type="text" class="form-control" name="name" value="{{Auth::user()->name}}" >
                                         </div>
                                     </div>
                                     <div class="form-group mt-4">
@@ -21,23 +21,18 @@
                                         <div class="col-md-10 mt-3">
                                             <input id="email" type="email"
                                                 class="form-control @error('email') is-invalid @enderror"
-                                                name="email">
+                                                name="email" value="{{Auth::user()->email}}" >
                                         </div>
+                                    </div>
+                                    <div class="text-center mt-5">
+                                        <button class="btn myButton" type="submit">Invia Richiesta</button>
                                     </div>
                                 </form>
                             @endif
                         </div>
-                        <div class="col-5 ms-5 mb-3 ">
-                            <label for="description" class="form-label">Descrizione</label>
-                            <div class="mt-3 ">
-                                <textarea type="text" class="form-control" name="description"> </textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-5">
-                        <button type="submit" class="btn myButton">Invia richiesta</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </x-layout>

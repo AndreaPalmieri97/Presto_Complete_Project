@@ -23,7 +23,7 @@
                         <input type="password" class="form-control" name="password_confirmation">
                     </div>
                     <button type="submit" class="btn myButton mb-2">Registrati</button><br>
-                    <p>Sei già reggistrato?</p>
+                    <p>Sei già registrato?</p>
                     <a class="btn myButton ms-2" href="{{ route('login') }}" role="button">Accedi</a>
 
                 </form>

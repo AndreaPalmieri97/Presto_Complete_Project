@@ -13,4 +13,11 @@ class PublicController extends Controller
 
         return view('welcome', compact('categories'));
     }
+
+    public function setLanguage($lang) {
+
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
+
 }

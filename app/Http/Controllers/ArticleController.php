@@ -65,4 +65,6 @@ class ArticleController extends Controller
         $articles = Article::search($request->searched)->where('is_accepted', true)->paginate(10);
         return view('filterArticle' , compact('articles'));
     }
+
+
 }

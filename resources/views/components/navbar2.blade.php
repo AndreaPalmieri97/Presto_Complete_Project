@@ -11,6 +11,12 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item">
+                    <x-_locale lang="it" />
+                </li>
+                <li class="nav-item">
+                    <x-_locale lang="en" />
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('index-article') }}">Visualizza annunci</a>
                 </li>
                 <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">

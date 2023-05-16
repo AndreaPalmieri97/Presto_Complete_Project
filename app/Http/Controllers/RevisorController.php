@@ -39,13 +39,16 @@ class RevisorController extends Controller
         return view('revisor-request');
     }
 
+
+
     public function store(Request $request)
     {
         Auth::user()->name= $request->input('name');
         Auth::user()->email = $request->input('email');
+        $tellMeWhy = $request->input('tellMeWhy');
         Auth::user()->save();
 
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(), $tellMeWhy));
 
         return redirect()->route('home')->with('success', 'La tua richiesta è stata inviata con successo.');
     }

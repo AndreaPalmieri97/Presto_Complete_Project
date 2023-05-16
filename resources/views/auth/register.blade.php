@@ -24,7 +24,6 @@
                     </div>
                     <button type="submit" class="btn myButton my-4">Registrati</button><br>
                     <a class="ms-2" href="{{ route('login') }}">Sei già registrato? Accedi qui</a>
-
                 </form>
             </div>
         </div>

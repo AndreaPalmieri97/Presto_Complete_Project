@@ -17,7 +17,10 @@
                     <x-_locale lang="en" />
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('index-article') }}">Visualizza annunci</a>
+                    <x-_locale lang="es" />
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('index-article') }}">{{__('ui.linknavArticle')}}</a>
                 </li>
                 <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
@@ -44,7 +47,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{__('ui.registrati')}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>

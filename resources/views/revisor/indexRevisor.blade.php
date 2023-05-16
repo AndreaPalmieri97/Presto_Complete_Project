@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-6">
                 <h1 class="mb-5 ms-5">
-                    {{ $article_to_check ? 'Ecco l\'annuncio da revisionare :' : 'Non ci sono annunci da revisionare' }}
+                    {{ $article_to_check ?'Ecco l\'annuncio da revisionare :' : 'Non ci sono annunci da revisionare' }}
                 </h1>
                 @if ($article_to_check)
                     <h3 class="fw-bold mb-5 ms-5">Titolo: {{ $article_to_check->name }}</h3>

@@ -5,7 +5,7 @@
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
           <h1 class="fw-light fw-bold">Presto.it</h1>
-          <p class="fs-4">Compra e vendi con tutto il mondo</p>
+          <p class="fs-4 fw-bold">{{__('ui.headtitle')}}</p>
         </div>
       </div>
     </div>

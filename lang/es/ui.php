@@ -10,4 +10,9 @@ return [
     'confpass'=>'Confirmar contraseña',
     'registrati'=>'Regístrese en',
     'accedi'=>'Conectarse',
+    'headtitle'=>'Compra y vende en todo el mundo',
+    'searchbtn'=> 'Cerca',
+    'newArticle'=> 'INSERTAR UN NUEVO ARTÍCULO',
+    'zonarevisor'=> 'Área de revisores :',
+    'inserisciArticle'=> 'Publicar anuncio'
 ];

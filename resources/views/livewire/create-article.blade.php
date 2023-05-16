@@ -1,6 +1,6 @@
 <div>
     <div class="col-12 col-md-7 mt-3 text-center">
-        <h1 class="my-5 mx-5">INSERISCI UN NUOVO ARTICOLO</h1>
+        <h1 class="my-5 mx-5">{{__('ui.newArticle')}}</h1>
         <p class="h6 mt-4">Qualsiasi dato verrà acquisito rispettando la privacy come dall'Art n 123.</p>
         <p class="h6 mt-4">Usufruendo dei servizi offerti da Presto.it accetterai i termini e le condizioni del nostro sito.</p>
     </div>

@@ -10,4 +10,9 @@ return [
     'confpass'=>'Password confirmation',
     'registrati'=>'Register yourself',
     'accedi'=>'Join now',
+    'headtitle'=>'Buy and sell worldwide',
+    'searchbtn'=> 'Search',
+    'newArticle'=> 'INSERT A NEW ITEM',
+    'zonarevisor'=> 'Reviewer area :',
+    'inserisciArticle'=> 'Add new post'
 ];

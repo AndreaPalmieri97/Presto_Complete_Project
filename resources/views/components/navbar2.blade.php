@@ -25,7 +25,7 @@
                 <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                         name="searched">
-                    <button class="btn myButton" type="submit">Cerca</button>
+                    <button class="btn myButton" type="submit">{{__('ui.searchbtn')}}</button>
                 </form>
             </ul>
             @auth
@@ -35,7 +35,7 @@
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="btn myButton nav-link active text-white" aria-current="page"
-                            href="{{ route('revisor.index') }}">Zona Revisore :
+                            href="{{ route('revisor.index') }}">{{__('ui.zonarevisor')}}
                             <span>{{ App\Models\Article::toBeRevisionedCount() }}
                                 <span class="visually-hidden">Articoli da visionare</span>
                             </span>
@@ -55,8 +55,7 @@
                     @endguest
                     @auth
                         <li class="nav-item">
-                            <button class="myButton ms-2"><a class="text-white" href="{{ route('annunci') }}">Inserisci
-                                    annuncio</a></button>
+                            <button class="myButton ms-2"><a class="text-white" href="{{ route('annunci') }}">{{__('ui.inserisciArticle')}}</a></button>
                         </li>
                         <li class="nav-item">
                             <form class="mx-2" method="post" action="{{ route('logout') }}">

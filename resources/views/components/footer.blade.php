@@ -1,5 +1,5 @@
 <footer class="footer p-3 fw-bold d-flex justify-content-center align-items-center">
-    <p class="col-md-4 mb-0 text-dark text-center">© 2023 Company, Inc</p>
+    <p class="col-md-4 text-dark text-center">© 2023 Company, Inc</p>
     <ul class="nav col-md-4">
         <li class="nav-item"><a href="#" class="nav-link lead text-dark foo-hov">Home</a></li>
         <li class="nav-item"><a href="#" class="nav-link lead text-dark foo-hov">Andrea Palmieri</a></li>

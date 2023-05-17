@@ -17,25 +17,53 @@ class CreateArticle extends Component
     public $description;
     public $price;
     public $temporary_images;
-    public $image=[];
+    public $images = [];
+    public $image;
 
 
+    public function updatedTemporaryImages() {
 
+        if ($this->validate([
+            'temporary_images.*'=>'image',
+        ])) {
+            foreach ($this->temporary_images as $image) {
+                $this->images[] = $image;
 
+            }
+        }
+    }
+
+    // protected $rules = []
+
+    public function removeImage($key) {
+
+        if(in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
 
     public function store()
     {
 
-        $category = Category::find($this->category);
-        $category->articles()->create([
+        // $category = Category::find($this->category);
+
+        // $this->article = $category->articles()->create();
+
+        $this->article = Category::find($this->category)->articles()->create([
 
             'name' => $this->name,
             'description' => $this->description,
             'price' => $this->price,
             "user_id" => Auth::user()->id,
 
-
         ]);
+
+        if(count($this->images)){
+            foreach ($this->images as $image) {
+                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+            }
+        }
+
         return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
     }
 

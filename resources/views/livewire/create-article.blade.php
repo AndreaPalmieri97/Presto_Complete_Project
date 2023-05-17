@@ -5,7 +5,7 @@
         <p class="h6 mt-4">Usufruendo dei servizi offerti da Presto.it accetterai i termini e le condizioni del nostro
             sito.</p>
     </div>
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-4 mx-5">
         <form class="my-5" wire:submit.prevent="store">
             @csrf
             <div class="mb-3">
@@ -29,17 +29,20 @@
                 <input id="price" type="number" class="form-control" wire:model="price">
             </div>
             <div class="mb-3">
-                <label for="img" multiple class="form-label fs-5 fw-bold">Image</label>
-                <input wire:model="temporary_images" type="file" class="shadow form-control" name="img">
+                {{-- <label for="images" multiple class="form-label fs-5 fw-bold">Image</label> --}}
+                <input wire:model="temporary_images" type="file" class="shadow form-control" name="images" multiple />
             </div>
-            @if (!empty($imgages))
+            @if (!empty($images))
                 <div class="row">
                     <div class="col-12">
                         <p>Anteprima immagine</p>
                         <div class="row rounded shadow py-4">
                             @foreach ($images as $key => $image)
                                 <div class="col-3">
-                                    <div class="img-preview" style="background-image:url({{ $image->temporaryUrl() }})"></div>
+                                    <div class="img-preview"
+                                        style="background-image: url({{ $image->temporaryUrl() }});"></div>
+                                    <button type="button"
+                                        class="btn btn-danger shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
                                 </div>
                             @endforeach
                         </div>

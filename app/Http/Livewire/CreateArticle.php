@@ -20,31 +20,37 @@ class CreateArticle extends Component
     public $images = [];
     public $image;
 
+    protected $rules = [
+        'name' => 'required|min:4',
+        'images.*' => 'image',
+        'temporary_images.*' => 'image',
 
-    public function updatedTemporaryImages() {
+    ];
+
+    public function updatedTemporaryImages()
+    {
 
         if ($this->validate([
-            'temporary_images.*'=>'image',
+            'temporary_images.*' => 'image',
         ])) {
             foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
-
             }
         }
     }
 
-    // protected $rules = []
 
-    public function removeImage($key) {
+    public function removeImage($key)
+    {
 
-        if(in_array($key, array_keys($this->images))) {
+        if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
     }
 
     public function store()
     {
-
+        $this->validate();
         // $category = Category::find($this->category);
 
         // $this->article = $category->articles()->create();
@@ -58,9 +64,9 @@ class CreateArticle extends Component
 
         ]);
 
-        if(count($this->images)){
+        if (count($this->images)) {
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path'=>$image->store('images', 'public')]);
+                $this->article->images()->create(['path' => $image->store('images', 'public')]);
             }
         }
 

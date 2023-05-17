@@ -6,26 +6,41 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <x-_locale lang="it" />
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Lingua
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">
+                                <x-_locale lang="it" />
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <x-_locale lang="en" />
+                            </a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <x-_locale lang="es" />
+                            </a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
-                    <x-_locale lang="en" />
-                </li>
-                <li class="nav-item">
-                    <x-_locale lang="es" />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('index-article') }}">{{__('ui.linknavArticle')}}</a>
+                    <a class="nav-link" href="{{ route('index-article') }}">{{ __('ui.linknavArticle') }}</a>
                 </li>
                 <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
                         name="searched">
-                    <button class="btn myButton" type="submit">{{__('ui.searchbtn')}}</button>
+                    <button class="btn myButton" type="submit">{{ __('ui.searchbtn') }}</button>
                 </form>
             </ul>
             @auth
@@ -35,7 +50,7 @@
                 @if (Auth::user()->is_revisor)
                     <li class="nav-item">
                         <a class="btn myButton nav-link active text-white" aria-current="page"
-                            href="{{ route('revisor.index') }}">{{__('ui.zonarevisor')}}
+                            href="{{ route('revisor.index') }}">{{ __('ui.zonarevisor') }}
                             <span>{{ App\Models\Article::toBeRevisionedCount() }}
                                 <span class="visually-hidden">Articoli da visionare</span>
                             </span>
@@ -47,7 +62,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{__('ui.registrati')}}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('ui.registrati') }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
@@ -55,7 +70,8 @@
                     @endguest
                     @auth
                         <li class="nav-item">
-                            <button class="myButton ms-2"><a class="text-white" href="{{ route('annunci') }}">{{__('ui.inserisciArticle')}}</a></button>
+                            <button class="myButton ms-2"><a class="text-white"
+                                    href="{{ route('annunci') }}">{{ __('ui.inserisciArticle') }}</a></button>
                         </li>
                         <li class="nav-item">
                             <form class="mx-2" method="post" action="{{ route('logout') }}">

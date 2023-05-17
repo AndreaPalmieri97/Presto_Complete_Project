@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class='row'>
             <div class="col-12">
-                <h1 class="my-5 text-center">{{__('ui.lista')}}</h1>
+                <h1 class="my-5 text-center">{{ __('ui.lista') }}</h1>
             </div>
         </div>
     </div>

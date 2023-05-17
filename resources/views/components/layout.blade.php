@@ -27,15 +27,15 @@
     @endif
 
 
-    @if (Route::currentRouteName() == 'home')
-        <div class="vh-100">
-            {{ $slot }}
-        </div>
-    @elseif (Route::currentRouteName() == 'revisor.index')
+    @if (Route::currentRouteName() != 'home')
+        {{ $slot }}
+        <div class="vh-100"></div>
+    {{-- @elseif (Route::currentRouteName() == 'revisor.index')
         <div class="px-5 vh-100">
             {{ $slot }}
-        </div>
-        
+        </div> --}}
+    @else
+        {{ $slot }}
     @endif
 
 

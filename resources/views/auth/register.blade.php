@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-12 col-8 text-center bg-form shadow-lg">
+            <div class="col-12 text-center bg-form shadow-lg">
                 <h1 class="m-5 text-center">{{__('ui.registratiora')}}</h1>
                 <form class="my-5" method="POST" action="{{ 'register' }}">
                     @csrf

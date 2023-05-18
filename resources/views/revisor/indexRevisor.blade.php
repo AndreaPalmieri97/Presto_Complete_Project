@@ -1,7 +1,7 @@
 <x-layout>
 
     @if (session('revisorMessage'))
-        <div class="alert alert-danger alert-dismissible fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
+        <div class="alert alert-success alert-dismissible fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
             {{ session('revisorMessage') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>

@@ -20,7 +20,7 @@
 
 
     @if (session('requestRevisor'))
-        <div class="alert alert-danger fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
+        <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
             {{ session('requestRevisor') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>

@@ -14,7 +14,7 @@ body {
 .masthead {
   height: 65vh;
   min-height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.203), rgba(0, 0, 0, 0.281)), url('/public/img/ecommerce.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.126)), url('/public/img/sfondo1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,14 +43,13 @@ body {
 }
 
 .myButton {
-  box-shadow: inset 0px 1px 0px 0px #bbdaf7;
-  background: linear-gradient(to bottom, var(--rosso)100%, var(--colore3)5%);
-  /* background-color:#79bbff; */
+  /* box-shadow: inset 0px 1px 0px 0px #bbdaf7; */
+  background: linear-gradient(to bottom, var(--colore) 100%, var(--colore3)50%);
   border-radius: 6px;
   border: 1px var(--colore3);
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: #280af0;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
@@ -79,6 +78,13 @@ a {
 .bg-form {
   background-color: var(--colore5);
   padding: 10px 200px;
+  border-radius: 50px;
+  border: solid 2px var(--colore2);
+}
+
+.bg-form1{
+  background-color: var(--colore5);
+  /* padding: 10px 20px; */
   border-radius: 50px;
   border: solid 2px var(--colore2);
 }
@@ -129,3 +135,12 @@ li {
 .dropdown-item:hover {
   background-color: var(--colore5);
 }
+
+.search{
+  width: 35%;
+}
+
+
+/* .search @media (max-width:500px) {
+
+} */

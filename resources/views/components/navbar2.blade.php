@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <img src="../../img/logo.png" class="Logo">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -37,11 +37,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('index-article') }}">{{ __('ui.linknavArticle') }}</a>
                 </li>
-                <form class="d-flex" role="search" action="{{ route('search.article') }}" method="GET">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        name="searched">
-                    <button class="btn myButton" type="submit">{{ __('ui.searchbtn') }}</button>
-                </form>
             </ul>
             @auth
                 <li class="nav-item mx-3">

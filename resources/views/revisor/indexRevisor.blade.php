@@ -43,7 +43,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-12 col-md-6 text-center mt-5">
+                <div class="col-12 col-md-6 text-center mt-5 bg-form1">
                     <h3 class="fw-bold mb-5">Titolo: {{ $article_to_check->name }}</h3>
                     <h3 class="fw-bold mb-5">Descrizione: {{ $article_to_check->description }}</h3>
                     <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}</h3>

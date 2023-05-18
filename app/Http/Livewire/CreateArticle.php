@@ -70,7 +70,7 @@ class CreateArticle extends Component
             foreach ($this->images as $image) {
                 // $this->article->images()->create(['path' => $image->store('images', 'public')]);
                 $newFileName = "articles/{$this->article->id}";
-                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
+                $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
                 dispatch(new ResizeImage($newImage->path, 400, 300));
             }

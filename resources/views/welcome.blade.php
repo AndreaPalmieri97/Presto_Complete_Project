@@ -29,7 +29,7 @@
                 <div class="col-12 d-flex justify-content-center col-sm-6 col-lg-3">
                     <div class="card img-fluid card-custom" style="width: 25rem">
                         <div class="card-body">
-                            <img class="img-custom img-fluid" src="./img/{{ $category->img }}" ìì class="card-img-top">
+                            <img class="img-welcome img-fluid" src="./img/{{ $category->img }}" ìì class="card-img-top">
                             <h4 class="card-title text-center mb-3">{{ $category->name }}</h4>
                             <h6 class="text-center mb-3"> {!! $category->description !!}</h6>
                             <div class="d-flex justify-content-center align-items-center">

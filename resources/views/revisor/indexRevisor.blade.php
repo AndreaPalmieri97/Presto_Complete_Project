@@ -19,7 +19,7 @@
     @if ($article_to_check)
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6 mt-5">
+                <div class="col-12 col-md-6 mt-5">
                     <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
                         @if ($article_to_check->images)
                             <div class="carousel-inner">
@@ -43,7 +43,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-6 text-center mt-5">
+                <div class="col-12 col-md-6 text-center mt-5">
                     <h3 class="fw-bold mb-5">Titolo: {{ $article_to_check->name }}</h3>
                     <h3 class="fw-bold mb-5">Descrizione: {{ $article_to_check->description }}</h3>
                     <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}</h3>

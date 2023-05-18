@@ -42,7 +42,7 @@
                                 <p>Anteprima immagine</p>
                                 <div class="row rounded shadow py-4">
                                     @foreach ($images as $key => $image)
-                                        <div class="col-4">
+                                        <div class="col-12 col-md-4">
                                             <div class="img-preview img-fluid"
                                                 style="background-image: url({{ $image->temporaryUrl() }});"></div>
                                             <button type="button"

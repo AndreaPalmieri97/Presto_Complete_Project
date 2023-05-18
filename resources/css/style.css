@@ -116,3 +116,16 @@ li {
   background-size: cover;
   background-position: center;
 }
+
+.img-welcome {
+  width: 400px;
+  height: 250px;
+}
+
+.dropdown-menu {
+  background-color: var(--colore3);
+}
+
+.dropdown-item:hover {
+  background-color: var(--colore5);
+}

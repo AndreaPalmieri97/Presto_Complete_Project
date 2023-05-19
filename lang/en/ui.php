@@ -13,6 +13,6 @@ return [
     'headtitle'=>'Buy and sell worldwide',
     'searchbtn'=> 'Search',
     'newArticle'=> 'INSERT A NEW ITEM',
-    'zonarevisor'=> 'Reviewer area :',
+    'zonarevisor'=> 'Reviewer area: ',
     'inserisciArticle'=> 'Add new post'
 ];

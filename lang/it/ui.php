@@ -13,6 +13,6 @@ return [
     'headtitle'=>'Compra e vendi con tutto il mondo',
     'searchbtn'=> 'Cerca',
     'newArticle'=> 'INSERISCI UN NUOVO ARTICOLO',
-    'zonarevisor'=> 'Zona revisore :',
+    'zonarevisor'=> 'Zona revisore: ',
     'inserisciArticle'=> 'Inserisci annuncio'
 ];

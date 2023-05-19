@@ -26,7 +26,28 @@
                                 @foreach ($article_to_check->images as $image)
                                     <div
                                         class="carousel-item text-center @if ($loop->first) active @endif">
-                                        <img src="{{ Storage::url($image->path) }}" class="img-custom img-fluid rounded">
+                                        <img src="{{ Storage::url($image->path) }}" class="shadow-lg img-custom img-fluid rounded">
+                                        <div class="row text-center">
+                                            <div class="col-6 text-center mt-5">
+                                                <h5 class="tc-accent">Revisione Immagine</h5>
+                                                <div>
+                                                <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                                <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                                <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                                <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                                <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-4">
+                                                <h5 class="mt-5">Tags:</h5>
+                                                @if($image->labels)
+                                                    @foreach ($image->labels as $label)
+                                                        <p class="d-inline">{{$label}}</p>
+                                                    @endforeach
+                                                @endif
+                                            </div>
+                                        </div>
                                     </div>
                                 @endforeach
                             </div>
@@ -43,7 +64,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-center my-5 bg-form">
+                <div class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-start shadow-lg my-5 bg-form">
                     <h3 class="fw-bold my-5">Titolo: {{ $article_to_check->name }}</h3>
                     <h3 class="fw-bold mb-5">Descrizione: {{ $article_to_check->description }}</h3>
                     <h3 class="fw-bold my-5">Prezzo: {{ $article_to_check->price }}</h3>

@@ -1,14 +1,14 @@
 <div>
-    <div class="container mb-5">
+    <div class="container-fluid mb-5">
         <div class="row">
             <div class="col-12 mt-3 text-center">
-                <h1 class="my-5 mx-5">{{ __('ui.newArticle') }}</h1>
+                <h1 class="my-5">{{ __('ui.newArticle') }}</h1>
                 <p class="h6 mt-4">Qualsiasi dato verrà acquisito rispettando la privacy come dall'Art n 123.</p>
                 <p class="h6 mt-4">Usufruendo dei servizi offerti da Presto.it accetterai i termini e le condizioni del
                     nostro
                     sito.</p>
             </div>
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 col-md-6 mx-auto d-flex justify-content-center">
                 <form class="my-5 col-10" wire:submit.prevent="store">
                     @csrf
                     <div class="mb-3">
@@ -42,7 +42,7 @@
                                 <p>Anteprima immagine</p>
                                 <div class="row rounded shadow py-4">
                                     @foreach ($images as $key => $image)
-                                        <div class="col-12 col-md-4">
+                                        <div class="col-12 col-md-4 img-fluid">
                                             <div class="img-preview img-fluid"
                                                 style="background-image: url({{ $image->temporaryUrl() }});"></div>
                                             <button type="button"

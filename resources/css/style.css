@@ -77,12 +77,13 @@ body {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 
 .myButton:hover {
   color: #FFFFFF;
 }
-
 
 .buttons-wrapper {
   margin-top: 200px;
@@ -99,16 +100,10 @@ a {
 
 .bg-form {
   background-color: var(--colore5);
-  padding: 10px 200px;
   border-radius: 50px;
   border: solid 2px var(--colore2);
-}
-
-.bg-form1 {
-  background-color: var(--colore5);
-  /* padding: 10px 20px; */
-  border-radius: 50px;
-  border: solid 2px var(--colore2);
+  padding: 50px;
+  height: max-content;
 }
 
 .img-alt {
@@ -162,7 +157,6 @@ li {
   width: 35%;
 }
 
-
 @media (max-width:500px) {
   .search {
     width: 80%;
@@ -175,7 +169,7 @@ li {
 
   }
 
-  .myButton2 {
+  .btn-search {
     height: 38px;
     width: 60px;
   }
@@ -186,14 +180,27 @@ li {
     border-radius: 30px;
     box-shadow: 10px 10px 30px var(--rosso);
   }
-  .bg-form {
-    padding: 0%;
-    margin-top: 50px;
 
+  .bg-form {
+    padding: 5%;
+    margin-top: 50px;
+  }
+
+  .img-custom {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-right: 50px;
   }
 }
 
-.myButton2 {
+.btn-search {
   align-items: center;
   appearance: none;
   background-color: #3EB2FD;

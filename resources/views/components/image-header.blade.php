@@ -8,7 +8,7 @@
                 <form class="d-flex search mx-auto" role="search" action="{{ route('search.article') }}" method="GET">
                     <input class="form-control me-2" type="search" placeholder="{{ __('ui.searchbtn') }}"
                         aria-label="Search" name="searched">
-                    <button class="btn myButton2" type="submit">{{ __('ui.searchbtn') }}</button>
+                    <button class="btn btn-search" type="submit">{{ __('ui.searchbtn') }}</button>
                 </form>
             </div>
         </div>

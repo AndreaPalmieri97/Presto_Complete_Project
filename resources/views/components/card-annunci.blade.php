@@ -1,5 +1,5 @@
-<div class="card img-fluid card-custom" style="width: 25rem">
-    <div class="card-body text-center img-fluid">
+<div class="card img-fluid card-custom mt-5" style="width: 25rem">
+    <div class="card-body text-center img-fluid shadow-lg">
         @if (count($article->images))
             <img src="{{$article->images()->first()->getUrl(400,300) }}" class="mb-4 img-fluid rounded">
         @endif

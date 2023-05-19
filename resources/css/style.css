@@ -30,6 +30,11 @@ body {
 
 }
 
+.bg-desc{
+  border-radius: 20%;
+  
+}
+
 .card-custom {
   margin-bottom: 50px;
 

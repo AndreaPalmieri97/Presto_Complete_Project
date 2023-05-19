@@ -1,12 +1,12 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <div class="d-flex justify-content-evenly col-md-6 col-12 mt-5">
-                <h1>Annunci filtrati per: <h1 class="text-danger"> {{ $categoryName }} </h1> </h1>
+            <div class="col-12 col-md-6 mx-auto text-center mt-5">
+                <h1>{{ __('ui.filtroannunci') }} <h1 class="text-danger"> {{ $categoryName }} </h1>
+                </h1>
             </div>
         </div>
     </div>
-
     <div class="container-fluid">
         <div class="row">
             @forelse($article as $article)

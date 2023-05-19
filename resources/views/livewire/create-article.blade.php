@@ -44,7 +44,7 @@
                                     @foreach ($images as $key => $image)
                                         <div class="col-12 col-md-4 img-fluid">
                                             <div class="img-preview img-fluid"
-                                                style="background-image: url({{ $image->temporaryUrl() }});"></div>
+                                                style="background-image: url({{ $image->temporaryUrl() }});" ></div>
                                             <button type="button"
                                                 class="btn myButton shadow d-block text-center mb-5 mt-3 mx-auto"
                                                 wire:click="removeImage({{ $key }})">Cancella</button>

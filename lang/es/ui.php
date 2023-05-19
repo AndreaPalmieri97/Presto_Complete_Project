@@ -14,5 +14,6 @@ return [
     'searchbtn'=> 'Cerca',
     'newArticle'=> 'INSERTAR UN NUEVO ARTÍCULO',
     'zonarevisor'=> 'Área de revisores :',
-    'inserisciArticle'=> 'Publicar anuncio'
+    'inserisciArticle'=> 'Publicar anuncio',
+    'filtroannunci' => 'Anuncios filtrados por:'
 ];

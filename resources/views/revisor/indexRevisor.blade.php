@@ -1,5 +1,4 @@
 <x-layout>
-
     @if (session('revisorMessage'))
         <div class="alert alert-success alert-dismissible fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
             {{ session('revisorMessage') }}
@@ -26,7 +25,8 @@
                                 @foreach ($article_to_check->images as $image)
                                     <div
                                         class="carousel-item text-center @if ($loop->first) active @endif">
-                                        <img src="{{ Storage::url($image->path) }}" class="img-custom img-fluid rounded">
+                                        <img src="{{ Storage::url($image->path) }}"
+                                            class="img-custom img-fluid rounded">
                                     </div>
                                 @endforeach
                             </div>
@@ -43,7 +43,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-center my-5 bg-form">
+                <div class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-center my-5 shadow-lg bg-desc">
                     <h3 class="fw-bold my-5">Titolo: {{ $article_to_check->name }}</h3>
                     <h3 class="fw-bold mb-5">Descrizione: {{ $article_to_check->description }}</h3>
                     <h3 class="fw-bold my-5">Prezzo: {{ $article_to_check->price }}</h3>

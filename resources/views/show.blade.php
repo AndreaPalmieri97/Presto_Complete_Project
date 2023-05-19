@@ -14,7 +14,7 @@
                     <div class="carousel-inner">
                         @foreach ($article->images as $image)
                             <div class="carousel-item text-center @if ($loop->first) active @endif">
-                                <img src="{{ Storage::url($image->path) }}" class="img-custom rounded">
+                                <img src="{{ Storage::url($image->path) }}" class="img-custom rounded shadow-lg">
                             </div>
                         @endforeach
                     </div>

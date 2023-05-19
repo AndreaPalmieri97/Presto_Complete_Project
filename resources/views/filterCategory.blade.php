@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <div class="d-flex justify-content-evenly col-md-6 col-12">
+            <div class="d-flex justify-content-evenly col-md-6 col-12 mt-5">
                 <h1>Annunci filtrati per: <h1 class="text-danger"> {{ $categoryName }} </h1> </h1>
             </div>
         </div>
@@ -10,7 +10,7 @@
     <div class="container-fluid">
         <div class="row">
             @forelse($article as $article)
-                <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-lg-4 ">
+                <div class="d-flex justify-content-center col-12 col-sm-6 col-md-4 col-lg-3 ">
                     <x-card-annunci :article="$article" />
                 </div>
             @empty

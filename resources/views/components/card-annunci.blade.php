@@ -1,7 +1,7 @@
 <div class="card img-fluid card-custom" style="width: 25rem">
     <div class="card-body text-center img-fluid">
         @if (count($article->images))
-            <img src="{{ Storage::url($article->images->first()->path) }}" class="mb-4 img-fluid rounded">
+            <img src="{{$article->images()->first()->getUrl(400,300) }}" class="mb-4 img-fluid rounded">
         @endif
         <h4 class="card-title text-center fw-bold">{{ $article->name }}</h4>
         <h5> {!! $article->category->name !!}</h5>

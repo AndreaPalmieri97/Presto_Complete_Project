@@ -1,7 +1,8 @@
 <?php
 
-use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
+use App\Http\Requests\RegisterRequest;
+use App\Providers\RouteServiceProvider;
 
 return [
 
@@ -141,6 +142,9 @@ return [
             'confirm' => true,
             'confirmPassword' => true,
             // 'window' => 0,
+        ]),
+        Features::registration([
+            'request' => RegisterRequest::class,
         ]),
     ],
 

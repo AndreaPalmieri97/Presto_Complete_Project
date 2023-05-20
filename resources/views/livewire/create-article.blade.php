@@ -13,7 +13,11 @@
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label fs-5 fw-bold">Nome</label>
-                        <input id="name" type="text" class="form-control" wire:model="name">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
+                            wire:model="name">
+                        @error('name')
+                            {{ $message }}
+                        @enderror
                     </div>
                     <label for="category" class="form-label mb-3 fs-5 fw-bold">Categoria</label>
                     <select selected id="category" wire:model="category" class="form-select mb-3"
@@ -25,11 +29,19 @@
                     </select>
                     <div class="mb-3">
                         <label for="description" class="form-label fs-5 fw-bold">Descrizione</label>
-                        <textarea id="description" type="text" class="form-control" wire:model="description"> </textarea>
+                        <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror"
+                            wire:model="description"> </textarea>
+                        @error('description')
+                            {{ $message }}
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label fs-5 fw-bold">Prezzo</label>
-                        <input id="price" type="number" class="form-control" wire:model="price">
+                        <input id="price" type="number" class="form-control @error('price') is-invalid @enderror"
+                            wire:model="price">
+                        @error('price')
+                            {{ $message }}
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="images" multiple class="form-label fs-5 fw-bold">Image</label>
@@ -44,7 +56,7 @@
                                     @foreach ($images as $key => $image)
                                         <div class="col-12 col-md-4 img-fluid">
                                             <div class="img-preview img-fluid"
-                                                style="background-image: url({{ $image->temporaryUrl() }});" ></div>
+                                                style="background-image: url({{ $image->temporaryUrl() }});"></div>
                                             <button type="button"
                                                 class="btn myButton shadow d-block text-center mb-5 mt-3 mx-auto"
                                                 wire:click="removeImage({{ $key }})">Cancella</button>

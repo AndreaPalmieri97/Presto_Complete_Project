@@ -29,7 +29,15 @@ class CreateArticle extends Component
         'name' => 'required|min:4',
         'images.*' => 'image',
         'temporary_images.*' => 'image',
+        'description' => 'required|min:50',
+        'price' => 'required|numeric',
 
+    ];
+
+    protected $messages = [
+        'required' => 'Il campo deve essere necessariamente compilato',
+        'min' => 'Il campo compilato è troppo corto',
+        'numeric' => 'Il campo deve essere di tipo numerico',
     ];
 
     public function updatedTemporaryImages()
@@ -86,6 +94,12 @@ class CreateArticle extends Component
         }
 
         return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
+    }
+
+    public function updated($propertyName) {
+
+        $this->validateOnly($propertyName);
+        
     }
 
     public function render()

@@ -16,6 +16,7 @@
         </div>
     </div>
     @if ($article_to_check)
+        <hr class="a-divider-normal">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 mt-5">
@@ -31,19 +32,19 @@
                                             <div class="col-6 text-center mt-5">
                                                 <h5 class="tc-accent">Revisione Immagine</h5>
                                                 <div>
-                                                <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                                                <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                                                <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                                                <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                                <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
+                                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
+                                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
+                                                    <p>Violenza: <span class="{{ $image->violence }}"></span></p>
+                                                    <p>Contenuto Ammiccante: <span class="{{ $image->racy }}"></span>
+                                                    </p>
                                                 </div>
-
                                             </div>
                                             <div class="col-4">
                                                 <h5 class="mt-5">Tags:</h5>
-                                                @if($image->labels)
+                                                @if ($image->labels)
                                                     @foreach ($image->labels as $label)
-                                                        <p class="d-inline">{{$label}}</p>
+                                                        <p class="d-inline">{{ $label }}</p>
                                                     @endforeach
                                                 @endif
                                             </div>
@@ -53,24 +54,26 @@
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel"
                                 data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <i class="fa-sharp fa-solid fa-arrow-left fa-2xl arrow"></i>
                                 <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#showCarousel"
                                 data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <i class="fa-sharp fa-solid fa-arrow-right fa-2xl arrow"></i>
                                 <span class="visually-hidden">Next</span>
                             </button>
                         @endif
                     </div>
                 </div>
-                <div class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-start shadow-lg my-5 shadow-lg bg-desc">
-                    <h3 class="fw-bold my-5">Titolo: {{ $article_to_check->name }}</h3>
-                    <h3 class="fw-bold mb-5">Descrizione: {{ $article_to_check->description }}</h3>
-                    <h3 class="fw-bold my-5">Prezzo: {{ $article_to_check->price }}</h3>
+                <div
+                    class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-center shadow-lg bg-desc my-auto mt-5 d-flex flex-column align-items-center justify-content-center">
+                    <h3 class="fw-bold mt-5">Titolo: {{ $article_to_check->name }}</h3>
+                    <h3 class="fw-bold my-5">Descrizione: {{ $article_to_check->description }}</h3>
+                    <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}</h3>
                 </div>
             </div>
         </div>
+        <hr class="a-divider-normal">
         <div class="d-flex justify-content-evenly buttons-wrapper">
             <form action="{{ route('revisor.accept_article', ['article' => $article_to_check]) }}" method="POST">
                 @csrf

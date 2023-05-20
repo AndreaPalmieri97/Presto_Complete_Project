@@ -1,28 +1,23 @@
 <x-layout>
-
     @if (session('access.denied'))
         <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
             {{ session('access.denied') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-
     @if (session('acceptRevisor'))
         <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
             {{ session('acceptRevisor') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
-
     @if (session('success'))
-    <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
-        {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-@endif
-
+        <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <x-image-header />
-
     <div class="container-fluid">
         <div class="row">
             @foreach ($categories as $category)
@@ -42,8 +37,6 @@
             @endforeach
         </div>
     </div>
-
-
 
 
 

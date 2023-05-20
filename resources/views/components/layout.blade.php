@@ -39,7 +39,7 @@
         {{ $slot }}
     @endif
 
-
+    <hr class="a-divider-normal">
     <x-footer />
 
     @livewireScripts

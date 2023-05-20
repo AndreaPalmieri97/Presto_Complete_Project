@@ -1,14 +1,15 @@
 :root {
-  --rosso: rgb(140, 39, 30);
-  --colore2: rgb(171, 161, 148);
-  --colore3: rgb(207, 203, 202);
-  --colore4: rgb(216, 221, 222);
-  --colore5: rgb(217, 247, 250);
+  --colore2: #aba194;
+  --blue: #007BFF;
+  --colore4: #F5F5F5;
+  --colore5: #333333;
+  --rosso: #8c271e;
 }
 
 body {
   font-family: 'Fira Code', monospace;
   background-color: var(--colore4);
+  color: var(--colore5);
 }
 
 .masthead {
@@ -21,7 +22,9 @@ body {
 }
 
 .navbar {
-  background-color: var(--colore3);
+  background-color: var(--colore4);
+  border-bottom: 2px solid var(--rosso);
+  color: #8c271e;
 }
 
 .img-custom {
@@ -30,9 +33,14 @@ body {
 
 }
 
-.bg-desc{
+.bg-desc {
   border-radius: 20%;
-  
+  padding: 30px;
+  background-color: var(--colore4);
+}
+
+.arrow{
+  color: var(--blue);
 }
 
 .card-custom {
@@ -44,7 +52,7 @@ body {
   transform: scale(1.07);
   transition: 0.7s;
   border-radius: 30px;
-  box-shadow: 10px 10px 30px var(--rosso);
+  box-shadow: 10px 10px 30px var(--blue);
 
 }
 
@@ -91,7 +99,7 @@ body {
 }
 
 .buttons-wrapper {
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .myButton:active {
@@ -104,9 +112,9 @@ a {
 }
 
 .bg-form {
-  background-color: var(--colore5);
+  background-color: var(--colore4);
   border-radius: 50px;
-  border: solid 2px var(--colore2);
+  border: 2px;
   padding: 50px;
   height: max-content;
 }
@@ -127,7 +135,7 @@ li {
 
 .footer {
   /* position: absolute; */
-  background-color: var(--colore3);
+  background-color: var(--colore1);
 
 
 }
@@ -183,7 +191,7 @@ li {
     transform: scale(1.02);
     transition: 0.7s;
     border-radius: 30px;
-    box-shadow: 10px 10px 30px var(--rosso);
+    box-shadow: 10px 10px 30px var(--blue);
   }
 
   .bg-form {
@@ -202,6 +210,12 @@ li {
     justify-content: center;
     margin-top: 100px;
     margin-right: 50px;
+  }
+  .bg-desc {
+    border-radius: 5%;
+    padding: 0%;
+    border-radius: 40px;
+    background-color: var(--colore4);  
   }
 }
 

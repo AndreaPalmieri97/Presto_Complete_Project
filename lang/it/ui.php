@@ -15,5 +15,6 @@ return [
     'newArticle'=> 'INSERISCI UN NUOVO ARTICOLO',
     'zonarevisor'=> 'Zona revisore: ',
     'inserisciArticle'=> 'Inserisci annuncio' ,
-    'filtroannunci' => 'Annunci filtrati per:'
+    'filtroannunci' => 'Annunci filtrati per:',
+    'lingua' => 'Lingua'
 ];

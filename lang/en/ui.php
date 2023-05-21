@@ -14,5 +14,7 @@ return [
     'searchbtn'=> 'Search',
     'newArticle'=> 'INSERT A NEW ITEM',
     'zonarevisor'=> 'Reviewer area: ',
-    'inserisciArticle'=> 'Add new post'
+    'inserisciArticle'=> 'Add new post',
+    'filtroannunci' => 'Ads filtered by:',
+    'lingua' => 'language'
 ];

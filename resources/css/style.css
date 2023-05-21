@@ -25,6 +25,7 @@ body {
   background-color: var(--colore4);
   border-bottom: 2px solid var(--rosso);
   color: #8c271e;
+  font-size: 100% !important;
 }
 
 .img-custom {
@@ -216,6 +217,15 @@ li {
     padding: 0%;
     border-radius: 40px;
     background-color: var(--colore4);  
+  }
+   * {
+   font-size: 50%;
+  }
+  .navbar-collapse  {
+    font-size: 7rem;
+  }
+  .footer{
+    font-size: 4rem;
   }
 }
 

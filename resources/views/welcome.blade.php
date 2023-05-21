@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row">
             @foreach ($categories as $category)
-                <div class="col-12 col-sm-10 col-md-6 col-xl-3 d-flex justify-content-center">
+                <div class="col-6 col-md-6 col-xl-3 d-flex justify-content-center">
                     <div class="card img-fluid card-custom" style="width: 25rem">
                         <div class="card-body">
                             <img class="img-welcome img-fluid" src="./img/{{ $category->img }}" ìì class="card-img-top">

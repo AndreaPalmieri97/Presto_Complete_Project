@@ -8,20 +8,32 @@
                     <div class=" col-8 col-sm-7 col-md-7 col-lg-7 mb-3 mx-auto">
                         <label for="email" class="form-label fs-5 fw-bold">{{ __('ui.email') }}</label>
                         <input type="email" class="form-control" name="email">
+                        @error('email')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         <div id="emailHelp" class="form-text">Non condivideremo mai i tuoi dati.</div>
                     </div>
                     <div class=" col-8 col-sm-7 col-md-7 col-lg-7 mb-3 mx-auto">
                         <label for="name" class="form-label fs-5 fw-bold">{{ __('ui.nome') }}</label>
                         <input type="text" class="form-control" name="name">
+                        @error('name')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-8 col-sm-7 col-md-7 col-lg-7 mb-3 mx-auto">
                         <label for="password" class="form-label fs-5 fw-bold">Password</label>
                         <input type="password" class="form-control" name="password">
+                        @error('password')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-8 col-sm-7 col-md-7 col-lg-7 mb-3 mx-auto">
                         <label for="password_confirmation"
                             class="form-label fs-5 fw-bold">{{ __('ui.confpass') }}</label>
                         <input type="password" class="form-control" name="password_confirmation">
+                        @error('password_confirmation')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <button type="submit" class="btn myButton my-4">{{ __('ui.registrati') }}</button><br>
                     <a class="ms-2" href="{{ route('login') }}">Sei già registrato? Accedi qui</a>

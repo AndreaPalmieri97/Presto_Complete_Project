@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
@@ -28,7 +29,15 @@ class CreateArticle extends Component
         'name' => 'required|min:4',
         'images.*' => 'image',
         'temporary_images.*' => 'image',
+        'description' => 'required|min:50',
+        'price' => 'required|numeric',
 
+    ];
+
+    protected $messages = [
+        'required' => 'Il campo deve essere necessariamente compilato',
+        'min' => 'Il campo compilato è troppo corto',
+        'numeric' => 'Il campo deve essere di tipo numerico',
     ];
 
     public function updatedTemporaryImages()
@@ -74,14 +83,23 @@ class CreateArticle extends Component
                 $newFileName = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path, 400, 300));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 300),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
+                ])->dispatch($newImage->id);
             }
+            
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         return redirect()->route('thanks')->with('message', 'Annuncio inserito correttamente. Grazie per aver utilizzato Presto.it');
+    }
+
+    public function updated($propertyName) {
+
+        $this->validateOnly($propertyName);
+        
     }
 
     public function render()

@@ -22,9 +22,9 @@
         <div class="row">
             @foreach ($categories as $category)
                 <div class="col-6 col-md-6 col-xl-3 d-flex justify-content-center">
-                    <div class="card img-fluid card-custom" style="width: 25rem">
+                    <div class="card card-custom">
                         <div class="card-body">
-                            <img class="img-welcome img-fluid" src="./img/{{ $category->img }}" ìì class="card-img-top">
+                            <img class="img-welcome img-fluid" src="./img/{{ $category->img }}" class="card-img-top">
                             <h4 class="card-title text-center mb-3">{{ $category->name }}</h4>
                             <h6 class="text-center mb-3"> {!! $category->description !!}</h6>
                             <div class="d-flex justify-content-center align-items-center">

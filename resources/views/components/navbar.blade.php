@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <img src="../../img/logo.png" class="Logo img-fluid">
+        <img src="../../img/logo.png" class="Logo">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">{{__('ui.lingua')}}</a>
+                        aria-expanded="false">{{ __('ui.lingua') }}</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">
                                 <x-_locale lang="it" />
@@ -34,6 +34,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('index-article') }}">{{ __('ui.linknavArticle') }}</a>
                 </li>
+                <form class="d-flex search mx-auto" role="search" action="{{ route('search.article') }}"
+                    method="GET">
+                    <input class="form-control me-2 px-3" type="search" placeholder="{{ __('ui.searchbtn') }}"
+                        aria-label="Search" name="searched">
+                    <button class="btn btn-search" type="submit">{{ __('ui.searchbtn') }}</button>
+                </form>
             </ul>
             @auth
                 <li class="nav-item mx-3">
@@ -74,7 +80,6 @@
                     @endauth
                 </div>
             </ul>
-
         </div>
     </div>
 </nav>

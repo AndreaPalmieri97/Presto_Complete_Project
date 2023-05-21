@@ -16,8 +16,11 @@
 </head>
 
 <body>
-
-    <x-navbar2 />
+    @if (Route::currentRouteName() == 'home')
+    <x-navbar2 />        
+    @else
+        <x-navbar />
+    @endif
 
 
     @if (session('requestRevisor'))

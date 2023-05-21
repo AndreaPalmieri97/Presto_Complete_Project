@@ -40,12 +40,13 @@ body {
   background-color: var(--colore4);
 }
 
-.arrow{
+.arrow {
   color: var(--blue);
 }
 
 .card-custom {
   margin-bottom: 50px;
+  width: 25rem;
 
 }
 
@@ -171,7 +172,7 @@ li {
   width: 35%;
 }
 
-@media (max-width:500px) {
+@media (max-width:700px) {
   .search {
     width: 80%;
 
@@ -212,20 +213,33 @@ li {
     margin-top: 100px;
     margin-right: 50px;
   }
+
   .bg-desc {
     border-radius: 5%;
     padding: 0%;
     border-radius: 40px;
-    background-color: var(--colore4);  
+    background-color: var(--colore4);
   }
-   * {
-   font-size: 50%;
+
+  * {
+    font-size: 50%;
   }
-  .navbar-collapse  {
+
+  .navbar-collapse {
     font-size: 7rem;
   }
-  .footer{
-    font-size: 4rem;
+
+  .footer {
+    font-size: 3rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .Logo {
+    height: 100%;
+    width: 15%;
   }
 }
 

@@ -27,8 +27,7 @@
                                     <div
                                         class="carousel-item text-center @if ($loop->first) active @endif">
                                         @if (count($article_to_check->images))
-                                            <img src="{{ $image->getUrl(400, 300) }}"
-                                                class="mb-4 img-fluid rounded">
+                                            <img src="{{ $image->getUrl(400, 300) }}" class="mb-4 img-fluid rounded">
                                         @endif
                                         <div class="row text-center">
                                             <div class="col-6 text-center mt-5">
@@ -67,11 +66,21 @@
                         @endif
                     </div>
                 </div>
-                <div
-                    class="col-10 col-sm-7 col-md-5 col-lg-3 shadow-lg bg-desc mx-auto my-auto mt-5 text-center">
-                    <h3 class="fw-bold mt-5">Titolo: {{ $article_to_check->name }}</h3>
-                    <h3 class="fw-bold my-5">Descrizione: {{ $article_to_check->description }}</h3>
-                    <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}€</h3>
+                <div class="col-10 col-sm-7 col-md-5 col-lg-3 bg-desc mx-auto my-auto mt-5 d-flex flex-column">
+                    <h3 class="fw-bold mt-5">Titolo:</h3>
+                    <h4>{{ $article_to_check->name }}</h4>
+                    <h3 class="fw-bold my-3">Descrizione:</h3>
+                    <h4>{{ $article_to_check->description }}</h4>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <h3 class="fw-bold my-3">Categoria:</h3>
+                            <h4>{{ $article_to_check->category->name }}</h4>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h3 class="fw-bold my-3">Prezzo:</h3>
+                            <h4>{{ $article_to_check->price }}€</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

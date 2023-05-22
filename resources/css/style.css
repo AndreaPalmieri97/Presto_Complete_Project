@@ -44,9 +44,10 @@ body {
 }
 .bg-desc {
   border-radius: 20%;
-  padding: 30px;
-  background-color: var(--colore3);
+  padding: 50px;
+  background-color: var(--colore1);
   overflow-wrap: break-word;
+  box-shadow: 10px 10px 50px 10px black;
 }
 
 .arrow {
@@ -220,18 +221,17 @@ li {
 
 .dropdown-menu {
   background-color: var(--colore3);
-  /* position: absolute; */
+  
 }
-/* .dropdown-item{
-  display: flex;
-  flex-direction: row;
-} */
 .dropdown-item:hover {
   background-color: var(--colore4);
 }
 
 .search {
   width: 35%;
+}
+.search2{
+  width: 50%;
 }
 
 .form-control {
@@ -283,12 +283,12 @@ li {
     border-radius: 5%;
     padding: 0% 30px;
     border-radius: 40px;
-    background-color: var(--colore3);
+    background-color: var(--colore1);
   }
 
-  /* * {
-    font-size: 70%;
-  } */
+  .search2{
+    width: 80%;
+  }
 
   .dropdown-menu{
     justify-content:left;

@@ -3,7 +3,7 @@ return [
     'linknavArticle'=>'Show articles',
     'title1'=>'Used Sale',
     'title2'=>'Presto.it deals with the buying and selling of used products by users from all over the world.',
-    'lista'=>'List of ads advertisement',
+    'lista'=>'List of advertisement',
     'registratiora'=>'Register now',
     'email'=>'Email address',
     'nome'=>'Name',

@@ -11,7 +11,7 @@
     <div class="container-fluid my-5">
         <div class='row'>
             @foreach ($article as $article)
-                <div class="d-flex justify-content-center col-6 col-md-6 col-lg-3">
+                <div class="d-flex justify-content-center col-12 col-md-6 col-lg-3">
                     <x-card-annunci :article="$article" />
                 </div>
             @endforeach

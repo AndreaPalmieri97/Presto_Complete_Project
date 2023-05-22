@@ -35,7 +35,7 @@
                     <a class="nav-link" href="{{ route('index-article') }}">{{ __('ui.linknavArticle') }}</a>
                 </li>
                 @if (Route::currentRouteName() != 'home')
-                    <form class="d-flex search mx-auto" role="search" action="{{ route('search.article') }}"
+                    <form class="d-flex search2 mx-auto ms-4" role="search" action="{{ route('search.article') }}"
                         method="GET">
                         <input class="form-control me-2 px-3" type="search" placeholder="{{ __('ui.searchbtn') }}"
                             aria-label="Search" name="searched">

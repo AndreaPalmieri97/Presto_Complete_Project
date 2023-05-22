@@ -29,7 +29,7 @@
                     </select>
                     <div class="mb-3">
                         <label for="description" class="form-label fs-5 fw-bold">Descrizione</label>
-                        <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror"
+                        <textarea id="description" type="text" class="form-control px-4 @error('description') is-invalid @enderror"
                             wire:model="description"> </textarea>
                         @error('description')
                             {{ $message }}

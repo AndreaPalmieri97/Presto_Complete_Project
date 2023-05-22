@@ -1,31 +1,33 @@
 :root {
-  --colore2: #aba194;
-  --blue: #007BFF;
-  --colore4: #F5F5F5;
-  --colore5: #333333;
-  --rosso: #8c271e;
+  --colore1:#0B3954;
+  --colore2: #087E8B;
+  --colore3: #BFD7EA;
+  --colore4: #FF5A5F;
+  --colore5: #C81D25;
 }
 
 body {
   font-family: 'Fira Code', monospace;
-  background-color: var(--colore4);
-  color: var(--colore5);
+  background-image:  linear-gradient(180deg, rgba(8,126,139,1) 25%, rgba(11,57,84,1) 100%);
+  color: var(--colore3);
 }
 
 .masthead {
   height: 65vh;
   min-height: 500px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.103), rgba(0, 0, 0, 0.126)), url('/public/img/sfondo1.jpg');
+  background-image:linear-gradient(180deg, rgba(11,57,84,1) 50%, rgba(8,126,139,1) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .navbar {
-  background-color: var(--colore4);
-  border-bottom: 2px solid var(--rosso);
-  color: #8c271e;
+  background-color: var(--colore1);
+  color:var(--colore3);
   font-size: 100% !important;
+}
+.nav-link{
+  color: var(--colore3);
 }
 
 .img-custom {
@@ -34,10 +36,13 @@ body {
 
 }
 
+.text-footer{
+  color: var(--colore3);
+}
 .bg-desc {
   border-radius: 20%;
   padding: 30px;
-  background-color: var(--colore4);
+  background-color: var(--colore3);
   overflow-wrap: break-word;
 }
 
@@ -48,6 +53,8 @@ body {
 .card-custom {
   margin-bottom: 50px;
   width: 25rem;
+  background-color: var(--colore3);
+  color: var(--colore1);
 
 }
 
@@ -55,8 +62,6 @@ body {
   transform: scale(1.07);
   transition: 0.7s;
   border-radius: 30px;
-  box-shadow: 10px 10px 30px var(--blue);
-
 }
 
 .card-custom:not(:hover) {
@@ -67,8 +72,7 @@ body {
 .myButton {
   align-items: center;
   appearance: none;
-  background-color: #3EB2FD;
-  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-color:var(--colore4);
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
   border-width: 0;
@@ -96,7 +100,8 @@ body {
 }
 
 .myButton:hover {
-  color: #FFFFFF;
+ background-color: var(--colore5);
+ color: white;
 }
 
 .buttons-wrapper {
@@ -110,10 +115,11 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--colore3);
 }
 
 .bg-form {
-  background-color: var(--colore4);
+  background-color: var(--colore3);
   border-radius: 50px;
   border: 2px;
   padding: 50px;
@@ -134,14 +140,10 @@ li {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.footer {
-  background-color: var(--colore1);
-}
-
 .btn-custom {
   border-radius: 10px;
   border: 0;
-  background-color: var(--colore4);
+  background-color: var(--colore3);
 }
 
 .Logo {
@@ -163,7 +165,7 @@ li {
 }
 
 .dropdown-menu {
-  background-color: var(--colore4);
+  background-color: var(--colore3);
   /* position: absolute; */
 }
 /* .dropdown-item{
@@ -225,7 +227,7 @@ li {
     border-radius: 5%;
     padding: 0% 30px;
     border-radius: 40px;
-    background-color: var(--colore4);
+    background-color: var(--colore3);
   }
 
   /* * {
@@ -265,8 +267,7 @@ li {
 .btn-search {
   align-items: center;
   appearance: none;
-  background-color: #3EB2FD;
-  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-color: var(--colore4);
   background-size: calc(100% + 20px) calc(100% + 20px);
   border-radius: 100px;
   border-width: 0;
@@ -289,7 +290,10 @@ li {
   vertical-align: top;
   white-space: nowrap;
 }
-
+.btn-search:hover{
+  background-color: var(--colore5);
+  color: white;
+}
 
 .form {
   display: flex;

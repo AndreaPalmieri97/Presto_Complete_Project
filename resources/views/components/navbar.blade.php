@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                    <a class="nav-link active nav-home" style="color:#BFD7EA" aria-current="page" href="{{ route('home') }}">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -50,10 +50,10 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item me-5" href="{{ route('annunci') }}">{{ __('ui.inserisciArticle') }}</a>
                         </li>
+                        @if (Auth::user()->is_revisor)
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        @if (Auth::user()->is_revisor)
                             <li><a class="dropdown-item" href="{{ route('revisor.index') }}">
                                     {{ __('ui.zonarevisor') }}
                                     <span>{{ App\Models\Article::toBeRevisionedCount() }}

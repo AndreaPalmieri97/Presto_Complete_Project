@@ -1,15 +1,15 @@
-<footer class="text-center text-lg-start bg-light text-muted">
-    <section class="d-flex justify-content-center justify-content-lg-space-around p-4 border-bottom">
-        <div class="me-5">
+<footer class="text-center text-lg-start text-muted">
+    <section class="d-flex justify-content-center justify-content-lg-space-around p-4">
+        <div class="me-5 text-footer">
             <span>Codice sorgente:</span>
-            <a href="https://github.com/Hackademy70/presto.it.git/" target="blank" class="me-4 text-reset fs-5">
+            <a href="https://github.com/Hackademy70/presto.it.git/" target="blank" class="me-4 text-footer fs-5">
                 <i class="fab fa-github"></i>
             </a>
         </div>
         <div class="d-flex">
             @if (!Auth::user() || !Auth::user()->is_revisor)
                 <li class="nav-item"><a href="{{ route('become.revisor') }}"
-                        class="nav-link lead text-dark foo-hov">Lavora
+                        class="nav-link lead text-footer foo-hov mt-1">Lavora
                         con noi</a></li>
             @endif
         </div>
@@ -23,21 +23,21 @@
                 <!-- Grid column -->
                 <div class="col-12 d-flex">
                     <div class="col-5 col-lg-2 col-xl-2 mb-4 mx-auto">
-                        <h6 class="text-uppercase fw-bold mb-4">
+                        <h6 class="text-uppercase text-footer fw-bold mb-4">
                             Framework utilizzati
                         </h6>
                         <p>
-                            <a class="text-reset">Laravel</a>
+                            <a class="text-footer">Laravel</a>
                         </p>
                         <p>
-                            <a class="text-reset">Livewire</a>
+                            <a class="text-footer">Livewire</a>
                         </p>
                         <p>
-                            <a class="text-reset">Bootstrap</a>
+                            <a class="text-footer">Bootstrap</a>
                         </p>
                     </div>
                     <!-- Links -->
-                    <div class="col-7 col-lg-3 col-xl-3 mx-auto me-5 d-flex flex-column">
+                    <div class="col-7 col-lg-3 col-xl-3 mx-auto me-5 d-flex text-footer flex-column">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
                         <a href="https://www.linkedin.com/in/gabriele-acquaviva/" target="blank"><i

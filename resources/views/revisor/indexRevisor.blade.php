@@ -26,8 +26,10 @@
                                 @foreach ($article_to_check->images as $image)
                                     <div
                                         class="carousel-item text-center @if ($loop->first) active @endif">
-                                        <img src="{{ Storage::url($image->path) }}"
-                                            class="shadow-lg img-custom img-fluid rounded">
+                                        @if (count($article_to_check->images))
+                                            <img src="{{ $image->getUrl(400, 300) }}"
+                                                class="mb-4 img-fluid rounded">
+                                        @endif
                                         <div class="row text-center">
                                             <div class="col-6 text-center mt-5">
                                                 <h5 class="tc-accent">Revisione Immagine</h5>

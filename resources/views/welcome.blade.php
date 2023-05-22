@@ -25,7 +25,7 @@
                     <div class="card card-custom">
                         <div class="card-body">
                             <img class="img-welcome img-fluid" src="./img/{{ $category->img }}" class="card-img-top">
-                            <h4 class="card-title text-center mb-3">{{ $category->name }}</h4>
+                            <h4 class="card-title text-center my-3">{{ $category->name }}</h4>
                             <h6 class="text-center mb-3"> {!! $category->description !!}</h6>
                             <div class="d-flex justify-content-center align-items-center">
                                 <a class="btn myButton" href="{{ route('show.category', $category->id) }}"

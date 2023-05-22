@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     @endif
-                    <button type="submit" class="btn myButton mt-5">Inserisci</button>
+                    <button type="submit" class="myButton2 shadow-lg mt-5">Crea Annuncio</button>
                 </form>
             </div>
         </div>

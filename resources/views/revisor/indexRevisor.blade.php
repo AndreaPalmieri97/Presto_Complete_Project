@@ -80,12 +80,12 @@
             <form action="{{ route('revisor.accept_article', ['article' => $article_to_check]) }}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button class="ms-5 bg-success btn-lg btn fw-bold text-white " type="submit">Accetta</BUtton>
+                <button class="ms-5 bg-success btn-lg btn fw-bold text-white RejAcc" type="submit">Accetta</BUtton>
             </form>
             <form action="{{ route('revisor.reject_article', ['article' => $article_to_check]) }}" method="POST">
                 @csrf
                 @method('PATCH')
-                <button class="ms-5 bg-danger btn-lg btn fw-bold text-white" type="submit">Rifiuta</BUtton>
+                <button class="ms-5 bg-danger btn-lg btn fw-bold text-white RejAcc" type="submit">Rifiuta</BUtton>
             </form>
         </div>
     @endif

@@ -14,7 +14,7 @@
                     <x-card-annunci :article="$article" />
                 </div>
             @empty
-                <h2>Non ci sono annunci per questa ricerca</h2>
+                <h2 class=" my-5 d-flex justify-content-center align-items-center">Non ci sono annunci per questa ricerca</h2>
             @endforelse
         </div>
     </div>

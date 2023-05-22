@@ -1,15 +1,14 @@
 <x-layout>
     <div class="container-fluid mt-5">
         <div class="row">
-            <div class="col-12 col-sm-8 col-md-10 col-lg-8 col-xxl-5 mx-auto text-center">
-                <div class="mx-auto card bg-form shadow-lg p-5">
-                    <div class="card-header text-danger fw-bold fs-4">Diventa un revisore</div>
+            <div class="col-10 col-sm-8 col-md-10 col-lg-8 col-xxl-5 mx-auto text-center border-reg bg-form">
+                    <div class="card-header fw-bold fs-4 color-reg">Diventa un revisore</div>
                     <div class="card-body mx-auto">
                         @if (!Auth::user()->is_revisor)
                             <div class="col-10 mt-3 mx-auto fw-bold">
                                 <form class="text-center mx-auto" method="POST" action="{{ route('become.revisor.store') }}">
                                     @csrf
-                                    <div class="form-group ">
+                                    <div class="form-group">
                                         <label for="name">Nome completo</label>
                                         <div class="col-12 col-sm-7 col-md-8 col-lg-10 mx-auto mt-3">
                                             <input readonly="readonly" id="name" type="text" class=" form-control" name="name"
@@ -28,7 +27,7 @@
                                     <div class="form-group my-4">
                                         <label for="tellMeWhy">Parlaci di te</label>
                                         <div class="col-12 col-sm-7 col-md-8 col-lg-10 mt-3 mx-auto">                                        
-                                            <textarea id="tellMeWhy" onfocus="this.value=''" type="text" class="form-control" name="tellMeWhy" rows="5" cols="40">Ciao sono Mario e vorrei diventare revisore perchè...</textarea>
+                                            <textarea id="tellMeWhy" class="border-mobile form-control" onfocus="this.value=''" type="text" name="tellMeWhy" rows="5" cols="40">Ciao sono Mario e vorrei diventare revisore perchè...</textarea>
                                         </div>
                                     </div>
                                     <div class="text-center mt-5">
@@ -38,7 +37,7 @@
                             </div>
                         @endif
                     </div>
-                </div>
+                
             </div>
         </div>
     </div>

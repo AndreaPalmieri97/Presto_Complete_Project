@@ -24,14 +24,14 @@ class RevisorController extends Controller
     {
 
         $article->setAccepted(true);
-        return redirect()->back()->with('revisorMessage', 'Complimeti, hai accettato l\'annuncio');
+        return redirect()->back()->with('revisorMessage', 'Complimenti, hai accettato l\'annuncio 👍');
     }
 
     public function rejectArticle(Article $article)
     {
 
         $article->setAccepted(false);
-        return redirect()->back()->with('revisorMessage', 'Complimeti, hai rifiutato l\'annuncio');
+        return redirect()->back()->with('revisorMessage', 'Hai rifiutato l\'annuncio 👎');
     }
 
     public function becomeRevisor()

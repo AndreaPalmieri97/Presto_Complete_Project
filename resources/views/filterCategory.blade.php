@@ -14,7 +14,7 @@
                     <x-card-annunci :article="$article" />
                 </div>
             @empty
-            <hr class="a-divider-normal my-5">
+            <hr class="a-divider-normal">
                <h2 class="mt-5">Non ci sono annunci per questa categoria</h2>
             @endforelse
         </div>

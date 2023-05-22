@@ -30,6 +30,9 @@ body {
   color: var(--colore3);
 }
 
+.home-col{
+  color: var(--colore3);
+}
 .img-custom {
   height: 500px;
   width: 600px;
@@ -99,6 +102,40 @@ body {
   margin-left: 10px;
 }
 
+.myButton2 {
+  align-items: center;
+  appearance: none;
+  background-color: rgb(0, 100, 0);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: inline-flex;
+  font-family: CircularStd, sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s, background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.myButton2:hover{
+  background-color: green;
+}
+
 .myButton:hover {
  background-color: var(--colore5);
  color: white;
@@ -106,6 +143,11 @@ body {
 
 .buttons-wrapper {
   margin-top: 80px;
+}
+
+.RejAcc {
+  border-radius: 100px;
+  box-shadow: 3px 3px 3px black;
 }
 
 .myButton:active {
@@ -118,12 +160,24 @@ a {
   color: var(--colore3);
 }
 
+.nav-link:hover{
+  color: var(--colore5);
+}
+
 .bg-form {
-  background-color: var(--colore3);
+  background-color: var(--colore2);
   border-radius: 50px;
   border: 2px;
   padding: 50px;
   height: max-content;
+}
+
+.border-reg{
+  box-shadow: 15px 15px 10px 10px var(--colore1) ;
+}
+
+.color-reg{
+  color: var(--colore3);
 }
 
 .img-alt {
@@ -173,24 +227,26 @@ li {
   flex-direction: row;
 } */
 .dropdown-item:hover {
-  background-color: var(--colore5);
+  background-color: var(--colore4);
 }
 
 .search {
   width: 35%;
 }
 
+.form-control {
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
 
 @media (max-width:700px) {
   .search {
     width: 80%;
-
   }
 
   .form-control {
     border-radius: 100px;
     margin-bottom: 10px;
-
   }
 
   .btn-search {
@@ -262,6 +318,15 @@ li {
   .dropdown-menu{
     position: relative;
   }
+  .border-mobile{
+      display: block;
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      border-radius: 20px;
+  }
 }
 
 .btn-search {
@@ -289,6 +354,7 @@ li {
   touch-action: manipulation;
   vertical-align: top;
   white-space: nowrap;
+  height: 38px;
 }
 .btn-search:hover{
   background-color: var(--colore5);
@@ -437,3 +503,4 @@ li {
   right: 0;
   left: auto;
 }
+

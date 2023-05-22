@@ -8,8 +8,8 @@
                 <h4>Prezzo: {{ $article->price }} € </h4>
             </div>
         </div>
-        <div class="col-12 text-center mt-5">
-            <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="col-12 text-center mt-5 d-flex justify-content-center">
+            <div id="showCarousel" class="carousel slide w-50" data-bs-ride="carousel">
                 @if (count($article->images))
                     <hr class="a-divider-normal mb-5">
                     <div class="carousel-inner">

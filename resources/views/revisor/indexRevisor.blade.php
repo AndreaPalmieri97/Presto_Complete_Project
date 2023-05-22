@@ -66,10 +66,10 @@
                     </div>
                 </div>
                 <div
-                    class="col-10 col-sm-7 col-md-5 col-lg-3 mx-auto text-center shadow-lg bg-desc my-auto mt-5 d-flex flex-column align-items-center justify-content-center">
+                    class="col-10 col-sm-7 col-md-5 col-lg-3 shadow-lg bg-desc mx-auto my-auto mt-5 text-center">
                     <h3 class="fw-bold mt-5">Titolo: {{ $article_to_check->name }}</h3>
                     <h3 class="fw-bold my-5">Descrizione: {{ $article_to_check->description }}</h3>
-                    <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}</h3>
+                    <h3 class="fw-bold mb-5">Prezzo: {{ $article_to_check->price }}€</h3>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Presto.it</title>
     @vite (['resources/css/app.css','resources/js/app.js'])
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css%22%3E">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css%22%3E"> --}}
     <script src="https://kit.fontawesome.com/c6fe5385fc.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
@@ -16,12 +16,8 @@
 </head>
 
 <body>
-    @if (Route::currentRouteName() == 'home')
-    <x-navbar2 />        
-    @else
-        <x-navbar />
-    @endif
 
+    <x-navbar />
 
     @if (session('requestRevisor'))
         <div class="alert alert-success fade show mx-5 text-center my-3 fs-4 shadow-lg" role="alert">
@@ -31,16 +27,11 @@
     @endif
 
 
-    @if (Route::currentRouteName() != 'home')
+    {{-- @if (Route::currentRouteName() != 'home') --}}
+        <div class="min-vh-100">{{ $slot }}</div>
+    {{-- @else
         {{ $slot }}
-        <div class="vh-100"></div>
-    {{-- @elseif (Route::currentRouteName() == 'revisor.index')
-        <div class="px-5 vh-100">
-            {{ $slot }}
-        </div> --}}
-    @else
-        {{ $slot }}
-    @endif
+    @endif --}}
 
     <hr class="a-divider-normal">
     <x-footer />

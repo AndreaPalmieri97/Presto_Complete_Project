@@ -13,7 +13,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">{{ __('ui.lingua') }}</a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu text-center">
                         <li><a class="dropdown-item" href="#">
                                 <x-_locale lang="it" />
                             </a></li>
@@ -34,27 +34,42 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('index-article') }}">{{ __('ui.linknavArticle') }}</a>
                 </li>
-                <form class="d-flex search mx-auto" role="search" action="{{ route('search.article') }}"
-                    method="GET">
-                    <input class="form-control me-2 px-3" type="search" placeholder="{{ __('ui.searchbtn') }}"
-                        aria-label="Search" name="searched">
-                    <button class="btn btn-search" type="submit">{{ __('ui.searchbtn') }}</button>
-                </form>
+                @if (Route::currentRouteName() != 'home')
+                    <form class="d-flex search mx-auto" role="search" action="{{ route('search.article') }}"
+                        method="GET">
+                        <input class="form-control me-2 px-3" type="search" placeholder="{{ __('ui.searchbtn') }}"
+                            aria-label="Search" name="searched">
+                        <button class="btn btn-search" type="submit">{{ __('ui.searchbtn') }}</button>
+                    </form>
+                @endif
             </ul>
             @auth
-                <li class="nav-item mx-3">
-                    <p class="my-2 user-log">Ciao {{ Auth::user()->name }}</p>
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ciao
+                        {{ Auth::user()->name }}</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item me-5" href="{{ route('annunci') }}">{{ __('ui.inserisciArticle') }}</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        @if (Auth::user()->is_revisor)
+                            <li><a class="dropdown-item" href="{{ route('revisor.index') }}">
+                                    {{ __('ui.zonarevisor') }}
+                                    <span>{{ App\Models\Article::toBeRevisionedCount() }}
+                                        <span class="visually-hidden">Articoli da visionare</span>
+                                    </span>
+                                </a></li>
+                            <li>
+                        @endif
+                        <hr class="dropdown-divider">
+                        <li>
+                            <form class="mx-2" method="post" action="{{ route('logout') }}">
+                                @csrf
+                                <button class="btn-custom" type="submit">Logout</button>
+                            </form>
+                        </li>
                 </li>
-                @if (Auth::user()->is_revisor)
-                    <li class="nav-item">
-                        <a class="btn myButton nav-link active text-white" aria-current="page"
-                            href="{{ route('revisor.index') }}">{{ __('ui.zonarevisor') }}
-                            <span>{{ App\Models\Article::toBeRevisionedCount() }}
-                                <span class="visually-hidden">Articoli da visionare</span>
-                            </span>
-                        </a>
-                    </li>
-                @endif
             @endauth
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <div class="d-flex justify-content-between align-items-center">
@@ -66,18 +81,6 @@
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
                     @endguest
-                    @auth
-                        <li class="nav-item">
-                            <button class="myButton ms-2"><a class="text-white"
-                                    href="{{ route('annunci') }}">{{ __('ui.inserisciArticle') }}</a></button>
-                        </li>
-                        <li class="nav-item">
-                            <form class="mx-2" method="post" action="{{ route('logout') }}">
-                                @csrf
-                                <button class="myButton" type="submit">Logout</button>
-                            </form>
-                        </li>
-                    @endauth
                 </div>
             </ul>
         </div>
